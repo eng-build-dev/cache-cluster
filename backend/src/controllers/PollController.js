@@ -35,7 +35,10 @@ class PollController {
     try {
       const poll = await pollService.getActivePoll();
       if (!poll) {
-        res.status(404).json({ error: 'No active poll found' });
+        // Return 404 with null data instead of error message
+        // This is expected behavior when no poll exists
+        // Frontend interceptor will handle this gracefully
+        res.status(404).json({ poll: null, remainingTime: 0 });
         return;
       }
 

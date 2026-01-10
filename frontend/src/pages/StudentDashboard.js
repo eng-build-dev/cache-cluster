@@ -60,7 +60,6 @@ const StudentDashboard = () => {
 
     // Set up socket connection first
     socket.on('connect', () => {
-      console.log('Socket connected');
       socket.emit('student:join', {
         name,
         sessionId: sessionIdRef.current
@@ -68,7 +67,6 @@ const StudentDashboard = () => {
     });
 
     socket.on('disconnect', () => {
-      console.log('Socket disconnected');
     });
 
     socket.on('connect_error', (error) => {
@@ -85,7 +83,6 @@ const StudentDashboard = () => {
 
     // Listen for active poll
     socket.on('poll:active', (data) => {
-      console.log('Received poll:active', data);
       setActivePoll(data.poll);
       setRemainingTime(data.remainingTime);
       setHasVoted(false);
@@ -94,7 +91,6 @@ const StudentDashboard = () => {
 
     // Listen for poll created
     socket.on('poll:created', (data) => {
-      console.log('Received poll:created', data);
       setActivePoll(data.poll);
       setRemainingTime(data.remainingTime);
       setHasVoted(false);
@@ -157,7 +153,6 @@ const StudentDashboard = () => {
       }
       
       if (pollResponse.data && pollResponse.data.poll) {
-        console.log('✅ Found active poll, restoring state');
         setActivePoll(pollResponse.data.poll);
         setRemainingTime(pollResponse.data.remainingTime);
         setHasVoted(false);
@@ -174,9 +169,8 @@ const StudentDashboard = () => {
         setPollResults(null);
         return;
       }
-      // Only log non-404 errors
       if (error.response?.status !== 404 && !error.isNoActivePoll) {
-        console.error('❌ Error fetching current state:', error);
+        console.error('Error fetching current state:', error);
       }
     }
   };

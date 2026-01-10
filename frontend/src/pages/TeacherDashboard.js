@@ -43,7 +43,6 @@ const TeacherDashboard = () => {
         setActivePoll(null);
         setCanCreatePoll(true);
       } else if (pollResponse.data && pollResponse.data.poll) {
-        console.log('✅ Found active poll, restoring state');
         setActivePoll(pollResponse.data.poll);
         setRemainingTime(pollResponse.data.remainingTime);
         setCanCreatePoll(false);
@@ -55,8 +54,7 @@ const TeacherDashboard = () => {
         const studentsResponse = await api.get('/students/active');
         setStudents(studentsResponse.data || []);
       } catch (err) {
-        console.error('❌ Error fetching students:', err);
-        // Ensure students array is empty if API fails
+        console.error('Error fetching students:', err);
         setStudents([]);
       }
     } catch (error) {
@@ -69,13 +67,13 @@ const TeacherDashboard = () => {
           const studentsResponse = await api.get('/students/active');
           setStudents(studentsResponse.data || []);
         } catch (err) {
-          console.error('❌ Error fetching students:', err);
+          console.error('Error fetching students:', err);
           setStudents([]);
         }
         return;
       }
       if (error.response?.status !== 404 && !error.isNoActivePoll) {
-        console.error('❌ Error fetching current state:', error);
+        console.error('Error fetching current state:', error);
         setStudents([]);
       }
     }
@@ -148,6 +146,15 @@ const TeacherDashboard = () => {
 
   const handleCreatePoll = async (pollData) => {
     if (!socketRef.current) return;
+
+    // If pollData is null, it means user wants to create a new poll
+    // Clear the current poll state to show the creation form
+    if (pollData === null) {
+      setActivePoll(null);
+      setPollResults(null);
+      setCanCreatePoll(true);
+      return;
+    }
 
     socketRef.current.emit('poll:create', pollData);
   };

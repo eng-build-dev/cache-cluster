@@ -1,33 +1,22 @@
 # Live Polling System
 
-## What is this project?
-
-This project is a **Live Polling System** used in a virtual class or session.
-
-👉 **A Teacher asks a question**  
-👉 **Students answer in real time**  
-👉 **Results update live**  
-👉 **Even if someone refreshes the page, nothing breaks**
-
----
-
 A resilient live polling system built with React, Node.js, Express, Socket.io, and MongoDB. This system supports two personas: Teacher (Admin) and Student, with real-time polling, state recovery, and comprehensive error handling.
 
-## ✅ Project Status
+## Project Status
 
-**The project is working as expected!** All core features have been implemented and tested:
+All core features have been implemented and tested:
 
-- ✅ **Poll Creation**: Teachers can create polls with questions, options, and timers
-- ✅ **Real-time Voting**: Students can vote and results update live via Socket.io
-- ✅ **State Recovery**: Page refresh maintains state - polls don't disappear
-- ✅ **Timer Synchronization**: Late-joining students see correct remaining time
-- ✅ **Race Condition Prevention**: Students cannot vote twice per question
-- ✅ **Live Participants**: Only real participants are shown (no mock data)
-- ✅ **Chat Functionality**: Real-time chat between teachers and students
-- ✅ **Poll History**: Teachers can view past poll results
-- ✅ **Student Removal**: Teachers can kick out students
-- ✅ **Error Handling**: Graceful error handling with user feedback
-- ✅ **UI/UX**: Matches the design specifications exactly
+- Poll Creation: Teachers can create polls with questions, options, and timers
+- Real-time Voting: Students can vote and results update live via Socket.io
+- State Recovery: Page refresh maintains state - polls don't disappear
+- Timer Synchronization: Late-joining students see correct remaining time
+- Race Condition Prevention: Students cannot vote twice per question
+- Live Participants: Only real participants are shown (no mock data)
+- Chat Functionality: Real-time chat between teachers and students
+- Poll History: Teachers can view past poll results
+- Student Removal: Teachers can kick out students
+- Error Handling: Graceful error handling with user feedback
+- UI/UX: Matches the design specifications exactly
 
 ## Features
 

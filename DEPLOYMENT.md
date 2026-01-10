@@ -48,7 +48,7 @@ If you still see `localhost`, the environment variables weren't set correctly or
 
 ### Frontend (Vercel - Recommended)
 
-**⚠️ IMPORTANT: Set Environment Variables in Vercel Dashboard**
+**IMPORTANT: Set Environment Variables in Vercel Dashboard**
 
 1. Go to your Vercel project → **Settings** → **Environment Variables**
 2. Add these variables:
@@ -57,9 +57,7 @@ If you still see `localhost`, the environment variables weren't set correctly or
    REACT_APP_SOCKET_URL=https://intervue-poll-0bvl.onrender.com
    ```
 3. **Redeploy** your frontend (Vercel will auto-redeploy after you push, or use Manual Deploy)
-4. Check browser console - should show:
-   - `🌐 API URL: https://intervue-poll-0bvl.onrender.com/api`
-   - `🔌 Socket URL configured: https://intervue-poll-0bvl.onrender.com`
+4. Check browser console - should show correct API and Socket URLs
 
 **Note:** The code now auto-detects production and uses the Render URL as fallback, but setting environment variables is still recommended for flexibility.
 

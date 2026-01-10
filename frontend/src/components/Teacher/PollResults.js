@@ -63,7 +63,10 @@ const PollResults = ({ poll, results, remainingTime, onCreateNewPoll, onViewHist
 
       {canCreateNew && (
         <button
-          onClick={() => onCreateNewPoll(null)}
+          onClick={() => {
+            // Clear the poll to show creation form
+            onCreateNewPoll(null);
+          }}
           className="ask-new-question-btn"
         >
           + Ask a new question
