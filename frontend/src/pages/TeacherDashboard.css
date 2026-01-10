@@ -1,0 +1,100 @@
+.teacher-dashboard {
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #373737;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.dashboard-header .poll-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #7765DA;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.dashboard-header .poll-badge::before {
+  content: "⚡";
+  font-size: 16px;
+}
+
+.dashboard-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.dashboard-header p {
+  font-size: 16px;
+  color: #F2F2F2;
+  line-height: 1.5;
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.side-panel {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.action-buttons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+.chat-button,
+.participants-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background-color: #7765DA;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(119, 101, 218, 0.4);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-button:hover,
+.participants-button:hover {
+  background-color: #4F0DCE;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .teacher-dashboard {
+    padding: 20px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+}
+

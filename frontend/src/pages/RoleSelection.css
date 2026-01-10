@@ -1,0 +1,125 @@
+.role-selection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #373737;
+}
+
+.role-selection-container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 48px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.role-selection-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.poll-badge {
+  display: inline-block;
+  background-color: #7765DA;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.role-selection-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #373737;
+  margin-bottom: 16px;
+}
+
+.role-selection-description {
+  font-size: 16px;
+  color: #6E6E6E;
+  line-height: 1.5;
+}
+
+.role-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.role-card {
+  border: 2px solid #F2F2F2;
+  border-radius: 8px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.role-card:hover {
+  border-color: #7765DA;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(119, 101, 218, 0.15);
+}
+
+.role-card.selected {
+  border-color: #7765DA;
+  background: #F8F7FF;
+}
+
+.role-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #373737;
+  margin-bottom: 12px;
+}
+
+.role-card p {
+  font-size: 14px;
+  color: #6E6E6E;
+  line-height: 1.5;
+}
+
+.continue-button {
+  width: 100%;
+  background-color: #7765DA;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-button:hover:not(:disabled) {
+  background-color: #4F0DCE;
+}
+
+.continue-button:disabled {
+  background-color: #6E6E6E;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .role-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .role-selection-container {
+    padding: 32px 24px;
+  }
+
+  .role-selection-title {
+    font-size: 24px;
+  }
+}
+
+
