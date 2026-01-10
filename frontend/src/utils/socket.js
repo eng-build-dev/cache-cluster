@@ -37,7 +37,7 @@ export const getSocket = () => {
       reconnectionDelayMax: 5000,
       timeout: 20000,
       forceNew: false,
-      withCredentials: true,
+      withCredentials: false,
       autoConnect: true,
       upgrade: true,
       rememberUpgrade: false,
