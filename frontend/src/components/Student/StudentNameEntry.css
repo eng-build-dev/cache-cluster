@@ -1,0 +1,104 @@
+.student-name-entry {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #373737;
+}
+
+.name-entry-container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 48px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.name-entry-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.poll-badge {
+  display: inline-block;
+  background-color: #7765DA;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.name-entry-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #373737;
+  margin-bottom: 16px;
+}
+
+.name-entry-header p {
+  font-size: 16px;
+  color: #6E6E6E;
+  line-height: 1.5;
+}
+
+.name-entry-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-entry-form label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #373737;
+  margin-bottom: 12px;
+}
+
+.name-input {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #F2F2F2;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  margin-bottom: 24px;
+}
+
+.name-input:focus {
+  outline: none;
+  border-color: #7765DA;
+}
+
+.continue-button {
+  width: 100%;
+  background-color: #7765DA;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-button:hover {
+  background-color: #4F0DCE;
+}
+
+@media (max-width: 768px) {
+  .name-entry-container {
+    padding: 32px 24px;
+  }
+
+  .name-entry-header h1 {
+    font-size: 24px;
+  }
+}
+
+
+
+

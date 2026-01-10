@@ -1,0 +1,59 @@
+.student-kicked {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #373737;
+  padding: 20px;
+}
+
+.kicked-container {
+  background: white;
+  border-radius: 12px;
+  padding: 48px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.kicked-header {
+  margin-bottom: 32px;
+}
+
+.poll-badge {
+  display: inline-block;
+  background-color: #7765DA;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.kicked-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #373737;
+  margin-bottom: 16px;
+}
+
+.kicked-content p {
+  font-size: 16px;
+  color: #6E6E6E;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .kicked-container {
+    padding: 32px 24px;
+  }
+
+  .kicked-content h1 {
+    font-size: 24px;
+  }
+}
+
+
+
+
