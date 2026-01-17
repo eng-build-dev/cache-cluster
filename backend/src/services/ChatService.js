@@ -1,9 +1,7 @@
 const ChatMessage = require('../models/ChatMessage');
 
 class ChatService {
-  /**
-   * Send a chat message
-   */
+ 
   async sendMessage(senderName, message, senderType) {
     const chatMessage = new ChatMessage({
       senderName,
